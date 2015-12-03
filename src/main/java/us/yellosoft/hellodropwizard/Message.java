@@ -13,7 +13,7 @@ public class Message {
   /**
      @param content a non-blank String
    */
-  public Message(String content) {
+  public Message(final String content) {
     this.content = content;
   }
 

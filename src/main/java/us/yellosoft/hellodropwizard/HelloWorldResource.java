@@ -20,16 +20,17 @@ public class HelloWorldResource {
   /**
      @param greetingTemplate a Java String.format template
    */
-  public HelloWorldResource(String greetingTemplate) {
+  public HelloWorldResource(final String greetingTemplate) {
     this.greetingTemplate = greetingTemplate;
   }
 
   /**
      @param name (defaults to "World")
+     @return a greeting message
    */
   @GET
   @Timed
-  public Message greet(@QueryParam("name") Optional<String> name) {
+  public Message greet(@QueryParam("name") final Optional<String> name) {
     final String value = String.format(greetingTemplate, name.or("World"));
     return new Message(value);
   }

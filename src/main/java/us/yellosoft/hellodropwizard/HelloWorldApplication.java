@@ -8,7 +8,11 @@ import io.dropwizard.setup.Environment;
    An example service application definition
  */
 public class HelloWorldApplication extends Application<HelloWorldConfiguration> {
-  public static void main(String[] args) throws Exception {
+  /** CLI entry point
+      @param args CLI flags
+      @throws Exception on error
+   */
+  public static void main(final String[] args) throws Exception {
     new HelloWorldApplication().run(args);
   }
 
@@ -18,12 +22,10 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
   }
 
   @Override
-  public void initialize(Bootstrap<HelloWorldConfiguration> bootstrap) {
-    // ...
-  }
+  public void initialize(final Bootstrap<HelloWorldConfiguration> bootstrap) {}
 
   @Override
-  public void run(HelloWorldConfiguration configuration, Environment environment) {
+  public void run(final HelloWorldConfiguration configuration, final Environment environment) {
     final HelloWorldResource resource = new HelloWorldResource(
       configuration.getGreetingTemplate()
     );

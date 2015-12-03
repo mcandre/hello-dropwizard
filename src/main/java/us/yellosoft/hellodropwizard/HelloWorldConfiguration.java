@@ -20,10 +20,10 @@ public class HelloWorldConfiguration extends Configuration {
   }
 
   /**
-     @param greeting a configurable message template
+     @param greetingTemplate a configurable message template
    */
   @JsonProperty
-  public void setGreeting(String greetingTemplate) {
+  public void setGreeting(final String greetingTemplate) {
     this.greetingTemplate = greetingTemplate;
   }
 }

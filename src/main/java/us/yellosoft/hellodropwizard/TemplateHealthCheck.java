@@ -8,7 +8,10 @@ import com.codahale.metrics.health.HealthCheck;
 public class TemplateHealthCheck extends HealthCheck {
   private final String greetingTemplate;
 
-  public TemplateHealthCheck(String greetingTemplate) {
+  /** Construct a TemplateHealthCheck
+      @param greetingTemplate a customazable greeting template
+   */
+  public TemplateHealthCheck(final String greetingTemplate) {
     this.greetingTemplate = greetingTemplate;
   }
 
