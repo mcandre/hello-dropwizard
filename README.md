@@ -17,14 +17,12 @@ $ curl localhost:8081/healthcheck
 # REQUIREMENTS
 
 * [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) 1.7+
-* [Gradle](http://gradle.org/) 2.1+
+* [gradle](http://gradle.org/) 2.1+
 
 ## Optional
 
 * [Sonar](http://www.sonarqube.org/)
 * [Infer](http://fbinfer.com/)
-
-E.g., `brew install gradle sonar sonar-runner infer`
 
 # CREDITS
 
