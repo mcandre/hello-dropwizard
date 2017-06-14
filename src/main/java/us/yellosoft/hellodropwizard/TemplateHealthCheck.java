@@ -3,13 +3,13 @@ package us.yellosoft.hellodropwizard;
 import com.codahale.metrics.health.HealthCheck;
 
 /**
-   An example Dropwizard health check
+ * An example Dropwizard health check
  */
 public class TemplateHealthCheck extends HealthCheck {
   private final String greetingTemplate;
 
   /** Construct a TemplateHealthCheck
-      @param greetingTemplate a customazable greeting template
+   *  @param greetingTemplate a customazable greeting template
    */
   public TemplateHealthCheck(final String greetingTemplate) {
     this.greetingTemplate = greetingTemplate;

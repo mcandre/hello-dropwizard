@@ -10,7 +10,7 @@ import com.google.common.base.Optional;
 import com.codahale.metrics.annotation.Timed;
 
 /**
-   An example Dropwizard Resource
+ * An example Dropwizard Resource
  */
 @Path("/hello-dropwizard")
 @Produces(MediaType.APPLICATION_JSON)
@@ -18,15 +18,15 @@ public class HelloWorldResource {
   private final String greetingTemplate;
 
   /**
-     @param greetingTemplate a Java String.format template
+   * @param greetingTemplate a Java String.format template
    */
   public HelloWorldResource(final String greetingTemplate) {
     this.greetingTemplate = greetingTemplate;
   }
 
   /**
-     @param name (defaults to "World")
-     @return a greeting message
+   * @param name (defaults to "World")
+   * @return a greeting message
    */
   @GET
   @Timed

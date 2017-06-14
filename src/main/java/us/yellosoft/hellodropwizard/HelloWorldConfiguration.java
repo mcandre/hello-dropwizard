@@ -5,14 +5,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.validator.constraints.NotBlank;
 
 /**
-   An example service configuration definition
+ * An example service configuration definition
  */
 public class HelloWorldConfiguration extends Configuration {
   @NotBlank
   private String greetingTemplate;
 
   /**
-     @return a configured message template
+   * @return a configured message template
    */
   @JsonProperty
   public String getGreetingTemplate() {
@@ -20,7 +20,7 @@ public class HelloWorldConfiguration extends Configuration {
   }
 
   /**
-     @param greetingTemplate a configurable message template
+   * @param greetingTemplate a configurable message template
    */
   @JsonProperty
   public void setGreeting(final String greetingTemplate) {

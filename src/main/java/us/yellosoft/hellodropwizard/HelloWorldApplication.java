@@ -5,12 +5,12 @@ import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
 /**
-   An example service application definition
+ * An example service application definition
  */
 public class HelloWorldApplication extends Application<HelloWorldConfiguration> {
   /** CLI entry point
-      @param args CLI flags
-      @throws Exception on error
+   *  @param args CLI flags
+   *  @throws Exception on error
    */
   public static void main(final String[] args) throws Exception {
     new HelloWorldApplication().run(args);
