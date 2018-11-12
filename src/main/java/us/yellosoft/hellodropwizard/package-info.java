@@ -1,4 +1,4 @@
 /**
- * Dropwizard example
- */
+* Dropwizard example
+*/
 package us.yellosoft.hellodropwizard;

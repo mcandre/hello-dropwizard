@@ -10,28 +10,28 @@ import com.google.common.base.Optional;
 import com.codahale.metrics.annotation.Timed;
 
 /**
- * An example Dropwizard Resource
- */
+* An example Dropwizard Resource
+*/
 @Path("/hello-dropwizard")
 @Produces(MediaType.APPLICATION_JSON)
 public class HelloWorldResource {
-  private final String greetingTemplate;
+    private final String greetingTemplate;
 
-  /**
-   * @param greetingTemplate a Java String.format template
-   */
-  public HelloWorldResource(final String greetingTemplate) {
-    this.greetingTemplate = greetingTemplate;
-  }
+    /**
+    * @param greetingTemplate a Java String.format template
+    */
+    public HelloWorldResource(final String greetingTemplate) {
+        this.greetingTemplate = greetingTemplate;
+    }
 
-  /**
-   * @param name (defaults to "World")
-   * @return a greeting message
-   */
-  @GET
-  @Timed
-  public Message greet(@QueryParam("name") final Optional<String> name) {
-    final String value = String.format(greetingTemplate, name.or("World"));
-    return new Message(value);
-  }
+    /**
+    * @param name (defaults to "World")
+    * @return a greeting message
+    */
+    @GET
+    @Timed
+    public Message greet(@QueryParam("name") final Optional<String> name) {
+        final String value = String.format(greetingTemplate, name.or("World"));
+        return new Message(value);
+    }
 }
